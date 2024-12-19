@@ -27,6 +27,11 @@
                 font-size: 1.25rem;
                 font-family: Arial, Helvetica, sans-serif;
             }
+            
+            & :is(span) {
+                font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
         }
 
         main {
@@ -68,7 +73,7 @@
             padding: 0.25rem 0.5rem;
         }
 
-        label {
+        label, span {
             color: #efefef;
         }
 
@@ -95,7 +100,8 @@
         <form id="form">
             <div class="input-div">
                 <label for="tag">Tag de spoiler:</label>
-                <input type="text" id="tag" name="tag" value="[SPOILER]">
+                <input type="text" id="tag" name="tag" value="[SPOILER]" aria-describedby="descricao-tag">
+                <span id="descricao-tag">Utilize este campo para dar mais detalhes sobre o spoiler, indicando o percentual do livro e afins.</span>
             </div>
             <div class="input-div">
                 <label for="texto">Texto:</label>
